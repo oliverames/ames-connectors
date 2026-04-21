@@ -1,14 +1,27 @@
 # ames-ynab
 
-YNAB (You Need A Budget) MCP connector, authored by Oliver Ames and published through the marketplace. Also carried here as a portable source snapshot.
+YNAB MCP connector for budgets, transactions, categories, scheduled transactions, accounts, months, payees, and budget review workflows.
 
-Source-of-truth files:
+## Runtime
 
-- `.mcp.json` — runtime connector definition for Claude Code
-- `update-sources.json` — package/update metadata plus local project mapping
-- `sync-sources` — refreshes `sources/` from the sibling development repo
-- `sources/ynab-mcp-server/` — trimmed snapshot of the authoritative connector repo
+This plugin starts the upstream npm package with `npx`:
 
-## History
+```bash
+npx -y @oliverames/ynab-mcp-server@latest
+```
 
-This plugin was previously named `ames-original-connectors` and bundled five MCP connectors (meta, sprout-social, ynab-mcp-server, imagerelay, unifi). In v2.0.0 it was scoped down to YNAB only and renamed to `ames-ynab`. The other four connectors continue to live in their own repos and can still be installed independently via npm; they're no longer bundled here because they weren't in active use.
+## Upstream Source
+
+- Repository: https://github.com/oliverames/ynab-mcp-server
+- Package: `@oliverames/ynab-mcp-server`
+- Snapshot: `sources/ynab-mcp-server/`
+
+Run `./sync-sources` from this plugin directory to refresh the snapshot from the upstream GitHub repository declared in `update-sources.json`.
+
+## Environment
+
+| Variable | Notes |
+|----------|-------|
+| `YNAB_API_TOKEN` | See upstream README for requirement and fallback behavior. |
+| `YNAB_BUDGET_ID` | See upstream README for requirement and fallback behavior. |
+| `YNAB_OP_PATH` | See upstream README for requirement and fallback behavior. |

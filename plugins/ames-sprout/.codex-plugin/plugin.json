@@ -1,0 +1,37 @@
+{
+  "name": "ames-sprout",
+  "version": "1.1.2",
+  "description": "Sprout Social MCP connector for analytics, inbox messages, social listening, publishing, media uploads, and support cases.",
+  "author": {
+    "name": "Oliver Ames",
+    "email": "oliverames@gmail.com",
+    "url": "https://github.com/oliverames"
+  },
+  "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-sprout",
+  "repository": "https://github.com/oliverames/ames-connectors",
+  "keywords": [
+    "mcp",
+    "sprout-social",
+    "social-media",
+    "analytics",
+    "publishing"
+  ],
+  "category": "marketing",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Sprout Social MCP",
+    "shortDescription": "Connect Claude and Codex to Sprout Social.",
+    "longDescription": "A Sprout Social MCP connector for analytics, inbox messages, social listening, content publishing, media uploads, support cases, metadata, and related social media workflows. Supports SPROUT_API_TOKEN or OAuth client credentials.",
+    "developerName": "Oliver Ames",
+    "category": "Marketing",
+    "capabilities": [
+      "MCP Servers"
+    ],
+    "websiteURL": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-sprout",
+    "defaultPrompt": [
+      "Summarize Sprout Social inbox activity.",
+      "Pull recent social analytics.",
+      "Prepare a publishing report from Sprout."
+    ]
+  }
+}

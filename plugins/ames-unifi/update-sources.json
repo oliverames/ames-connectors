@@ -1,0 +1,7 @@
+{
+  "ames-unifi-mcp": {
+    "package": "ames-unifi-mcp",
+    "repo": "https://github.com/oliverames/ames-unifi-mcp.git",
+    "branch": "main"
+  }
+}

@@ -1,7 +1,10 @@
 {
   "lytho-mcp-server": {
     "command": "bash",
-    "args": ["-c", "cd /tmp && npx -y @oliverames/lytho-mcp-server@latest"],
+    "args": [
+      "-c",
+      "cd /tmp && npx -y @oliverames/lytho-mcp-server@latest"
+    ],
     "env": {
       "LYTHO_CLIENT_ID": "${LYTHO_CLIENT_ID}",
       "LYTHO_CLIENT_SECRET": "${LYTHO_CLIENT_SECRET}",

@@ -1,0 +1,7 @@
+{
+  "sprout-mcp-server": {
+    "package": "@oliverames/sprout-mcp-server",
+    "repo": "https://github.com/oliverames/sprout-mcp-server.git",
+    "branch": "main"
+  }
+}

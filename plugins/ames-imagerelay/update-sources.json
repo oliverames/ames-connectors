@@ -1,0 +1,7 @@
+{
+  "imagerelay-mcp-server": {
+    "package": "imagerelay-mcp-server",
+    "repo": "https://github.com/oliverames/imagerelay-mcp-server.git",
+    "branch": "main"
+  }
+}

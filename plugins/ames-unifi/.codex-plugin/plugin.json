@@ -1,0 +1,38 @@
+{
+  "name": "ames-unifi",
+  "version": "1.0.3",
+  "description": "UniFi Network MCP connector for controller management, clients, devices, firewall, Wi-Fi, VPN, switching, hotspot, and traffic tools.",
+  "author": {
+    "name": "Oliver Ames",
+    "email": "oliverames@gmail.com",
+    "url": "https://github.com/oliverames"
+  },
+  "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-unifi",
+  "repository": "https://github.com/oliverames/ames-connectors",
+  "keywords": [
+    "mcp",
+    "unifi",
+    "ubiquiti",
+    "network",
+    "wifi",
+    "firewall"
+  ],
+  "category": "developer-tools",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "UniFi MCP",
+    "shortDescription": "Connect Claude and Codex to UniFi Network controllers.",
+    "longDescription": "A UniFi Network MCP connector for deep, permission-aware controller management across clients, devices, firewall, Wi-Fi, VPN, switching, hotspot, traffic, events, and system workflows. Requires UNIFI_HOST plus either UNIFI_API_KEY or username/password credentials.",
+    "developerName": "Oliver Ames",
+    "category": "Developer Tools",
+    "capabilities": [
+      "MCP Servers"
+    ],
+    "websiteURL": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-unifi",
+    "defaultPrompt": [
+      "Summarize UniFi network health.",
+      "List offline UniFi devices.",
+      "Review recent UniFi client activity."
+    ]
+  }
+}
