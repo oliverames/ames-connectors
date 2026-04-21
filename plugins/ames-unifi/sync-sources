@@ -74,8 +74,7 @@ def main() -> None:
                 "repo": repo,
                 "branch": branch,
                 "commit": commit,
-            }, indent=2) + "
-")
+            }, indent=2) + "\n")
             wanted.add(name)
             print(f"synced source: {name}@{commit[:12]}")
 
