@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <code>2 connector plugins</code> &bull;
-  <code>MCP server bundles</code> &bull;
-  <code>remote-first marketplace</code>
+  <code>6 connector plugins</code> &bull;
+  <code>upstream source snapshots</code> &bull;
+  <code>dual-host marketplace</code>
 </p>
 
 <p align="center">
@@ -21,41 +21,84 @@
 
 ---
 
-Ames Connectors keeps custom MCP connector plugins separate from the broader `ames-claude` skills marketplace. Each connector lives in its own plugin bundle so it can be installed, reviewed, and maintained independently.
+Ames Connectors keeps Oliver's first-party MCP connector plugins separate from the broader `ames-claude` skills marketplace. Each connector lives in its own plugin bundle so it can be installed, reviewed, and maintained independently in Claude Code and Codex.
 
 ## Why This Exists
 
-MCP connectors behave more like integrations than writing skills. They carry authentication requirements, runtime launch configs, source snapshots, and npm package references. Keeping them in a dedicated marketplace makes the boundary clearer: `ames-claude` can stay focused on skills and workflows, while `ames-connectors` handles service integrations.
+MCP connectors behave more like integrations than writing skills. They carry authentication requirements, runtime launch configs, upstream source snapshots, and npm package references. Keeping them in a dedicated marketplace makes the boundary clearer: `ames-claude` can stay focused on skills and workflows, while `ames-connectors` handles service integrations.
 
 ## Available Connectors
 
-| Plugin | Service | MCP package | Authentication |
-|--------|---------|-------------|----------------|
-| `ames-lytho` | Lytho Workflow | `@oliverames/lytho-mcp-server` | `LYTHO_CLIENT_ID`, `LYTHO_CLIENT_SECRET`, `LYTHO_TOKEN_URL` |
-| `ames-ynab` | YNAB | `@oliverames/ynab-mcp-server` | `YNAB_API_TOKEN` |
+| Plugin | Service | Runtime package | Upstream repository |
+|--------|---------|-----------------|---------------------|
+| `ames-meta` | Meta Business Suite | `@oliverames/meta-mcp-server` | [`meta-mcp-server`](https://github.com/oliverames/meta-mcp-server) |
+| `ames-ynab` | YNAB | `@oliverames/ynab-mcp-server` | [`ynab-mcp-server`](https://github.com/oliverames/ynab-mcp-server) |
+| `ames-sprout` | Sprout Social | `@oliverames/sprout-mcp-server` | [`sprout-mcp-server`](https://github.com/oliverames/sprout-mcp-server) |
+| `ames-lytho` | Lytho Workflow | `@oliverames/lytho-mcp-server` | [`lytho-mcp-server`](https://github.com/oliverames/lytho-mcp-server) |
+| `ames-imagerelay` | Image Relay | `imagerelay-mcp-server` | [`imagerelay-mcp-server`](https://github.com/oliverames/imagerelay-mcp-server) |
+| `ames-unifi` | UniFi Network | `ames-unifi-mcp` | [`ames-unifi-mcp`](https://github.com/oliverames/ames-unifi-mcp) |
 
 ## Marketplace Layout
 
 ```text
+.claude-plugin/marketplace.json
 .agents/plugins/marketplace.json
 plugins/
-  ames-lytho/
-    .codex-plugin/plugin.json
+  ames-meta/
     .claude-plugin/plugin.json
+    .codex-plugin/plugin.json
     .mcp.json
-    sources/lytho-mcp-server/
+    update-sources.json
+    sync-sources
+    sources/meta-mcp-server/
   ames-ynab/
-    .codex-plugin/plugin.json
     .claude-plugin/plugin.json
+    .codex-plugin/plugin.json
     .mcp.json
+    update-sources.json
+    sync-sources
     sources/ynab-mcp-server/
+  ames-sprout/
+    .claude-plugin/plugin.json
+    .codex-plugin/plugin.json
+    .mcp.json
+    update-sources.json
+    sync-sources
+    sources/sprout-mcp-server/
+  ames-lytho/
+    .claude-plugin/plugin.json
+    .codex-plugin/plugin.json
+    .mcp.json
+    update-sources.json
+    sync-sources
+    sources/lytho-mcp-server/
+  ames-imagerelay/
+    .claude-plugin/plugin.json
+    .codex-plugin/plugin.json
+    .mcp.json
+    update-sources.json
+    sync-sources
+    sources/imagerelay-mcp-server/
+  ames-unifi/
+    .claude-plugin/plugin.json
+    .codex-plugin/plugin.json
+    .mcp.json
+    update-sources.json
+    sync-sources
+    sources/ames-unifi-mcp/
 ```
 
-Each plugin includes a `.mcp.json` launch definition plus a source snapshot of the connector package. The npm packages remain the runtime entrypoints.
+Each plugin includes:
+
+- `.claude-plugin/plugin.json` for Claude Code
+- `.codex-plugin/plugin.json` for Codex
+- `.mcp.json` for the MCP runtime launch config
+- `update-sources.json` pointing at the upstream GitHub repository
+- `sync-sources` to refresh `sources/` from the upstream repository
 
 ## Development
 
-Update each connector in its source repository first, publish the npm package, then refresh the matching plugin snapshot here. The marketplace entry should continue to point at `./plugins/<plugin-name>` so Codex and Claude Code can resolve the bundle from this repository.
+Update each connector in its upstream repository first, publish the npm package, then run the matching plugin's `sync-sources` script here. The marketplace entries should continue to point at `./plugins/<plugin-name>` so Claude Code and Codex can resolve the bundle from this repository.
 
 ---
 

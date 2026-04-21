@@ -1,0 +1,7 @@
+{
+  "name": "meta-mcp-server",
+  "package": "@oliverames/meta-mcp-server",
+  "repo": "https://github.com/oliverames/meta-mcp-server.git",
+  "branch": "main",
+  "commit": "e428390246fb55ad72a3e1cccce04dd7c269ed8c"
+}

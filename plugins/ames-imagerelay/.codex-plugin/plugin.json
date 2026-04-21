@@ -1,0 +1,37 @@
+{
+  "name": "ames-imagerelay",
+  "version": "2.0.2",
+  "description": "Image Relay MCP connector for digital asset management, files, folders, collections, products, metadata, upload links, and webhooks.",
+  "author": {
+    "name": "Oliver Ames",
+    "email": "oliverames@gmail.com",
+    "url": "https://github.com/oliverames"
+  },
+  "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-imagerelay",
+  "repository": "https://github.com/oliverames/ames-connectors",
+  "keywords": [
+    "mcp",
+    "image-relay",
+    "digital-asset-management",
+    "dam",
+    "assets"
+  ],
+  "category": "productivity",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Image Relay MCP",
+    "shortDescription": "Connect Claude and Codex to Image Relay DAM.",
+    "longDescription": "An Image Relay MCP connector for browsing, searching, uploading, organizing, and administering digital assets through the Image Relay API. Requires IMAGERELAY_API_KEY; IMAGERELAY_SUBDOMAIN is optional.",
+    "developerName": "Oliver Ames",
+    "category": "Productivity",
+    "capabilities": [
+      "MCP Servers"
+    ],
+    "websiteURL": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-imagerelay",
+    "defaultPrompt": [
+      "Search Image Relay for campaign assets.",
+      "List recent Image Relay uploads.",
+      "Create an asset review checklist."
+    ]
+  }
+}

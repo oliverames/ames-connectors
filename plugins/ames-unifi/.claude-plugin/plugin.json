@@ -1,0 +1,18 @@
+{
+  "name": "ames-unifi",
+  "version": "1.0.3",
+  "description": "UniFi Network MCP connector for controller management, clients, devices, firewall, Wi-Fi, VPN, switching, hotspot, and traffic tools.",
+  "author": {
+    "name": "Oliver Ames",
+    "email": "oliverames@gmail.com"
+  },
+  "keywords": [
+    "mcp",
+    "unifi",
+    "ubiquiti",
+    "network",
+    "wifi",
+    "firewall"
+  ],
+  "mcpServers": "./.mcp.json"
+}

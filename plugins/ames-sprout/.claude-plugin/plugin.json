@@ -1,0 +1,17 @@
+{
+  "name": "ames-sprout",
+  "version": "1.1.2",
+  "description": "Sprout Social MCP connector for analytics, inbox messages, social listening, publishing, media uploads, and support cases.",
+  "author": {
+    "name": "Oliver Ames",
+    "email": "oliverames@gmail.com"
+  },
+  "keywords": [
+    "mcp",
+    "sprout-social",
+    "social-media",
+    "analytics",
+    "publishing"
+  ],
+  "mcpServers": "./.mcp.json"
+}

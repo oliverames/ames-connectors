@@ -1,7 +1,7 @@
 {
   "name": "ames-ynab",
-  "version": "2.0.1",
-  "description": "YNAB (You Need A Budget) MCP connector built and maintained by Oliver Ames. Installing this plugin activates the ynab-mcp-server MCP, providing full read/write access to YNAB budgets, transactions, categories, scheduled transactions, and payees.",
+  "version": "2.0.2",
+  "description": "YNAB MCP connector for budgets, transactions, categories, scheduled transactions, accounts, months, payees, and budget review workflows.",
   "author": {
     "name": "Oliver Ames",
     "email": "oliverames@gmail.com",
@@ -14,14 +14,14 @@
     "ynab",
     "budget",
     "finance",
-    "personal"
+    "personal-finance"
   ],
   "category": "finance",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "YNAB MCP",
-    "shortDescription": "Connect Codex to YNAB budgets and transactions.",
-    "longDescription": "A YNAB MCP connector that gives Codex read and write access to budgets, transactions, categories, scheduled transactions, and payees. Requires YNAB_API_TOKEN environment variable.",
+    "shortDescription": "Connect Claude and Codex to YNAB budgets and transactions.",
+    "longDescription": "A YNAB MCP connector that gives Claude and Codex read and write access to budgets, transactions, categories, scheduled transactions, accounts, months, and payees. Requires YNAB_API_TOKEN unless using the server's YNAB_OP_PATH fallback.",
     "developerName": "Oliver Ames",
     "category": "Finance",
     "capabilities": [

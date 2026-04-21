@@ -1,0 +1,39 @@
+{
+  "name": "ames-meta",
+  "version": "2.0.2",
+  "description": "Meta Business Suite MCP connector for Facebook Pages, Instagram, Threads, Ads Manager, Commerce, Conversions API, and related Graph API workflows.",
+  "author": {
+    "name": "Oliver Ames",
+    "email": "oliverames@gmail.com",
+    "url": "https://github.com/oliverames"
+  },
+  "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-meta",
+  "repository": "https://github.com/oliverames/ames-connectors",
+  "keywords": [
+    "mcp",
+    "meta",
+    "facebook",
+    "instagram",
+    "threads",
+    "ads-manager",
+    "social-media"
+  ],
+  "category": "marketing",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Meta MCP",
+    "shortDescription": "Connect Claude and Codex to Meta Business Suite.",
+    "longDescription": "A Meta Business Suite MCP connector for Facebook Pages, Instagram, Threads, Ads Manager, Commerce, Conversions API, audiences, insights, and utility workflows. Requires META_ACCESS_TOKEN; THREADS_ACCESS_TOKEN is optional for Threads-specific tools.",
+    "developerName": "Oliver Ames",
+    "category": "Marketing",
+    "capabilities": [
+      "MCP Servers"
+    ],
+    "websiteURL": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-meta",
+    "defaultPrompt": [
+      "List my Meta pages.",
+      "Summarize recent Instagram performance.",
+      "Draft a Threads publishing plan."
+    ]
+  }
+}

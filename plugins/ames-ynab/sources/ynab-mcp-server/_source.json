@@ -1,7 +1,7 @@
 {
   "name": "ynab-mcp-server",
-  "project": "ynab-mcp-server",
   "package": "@oliverames/ynab-mcp-server",
   "repo": "https://github.com/oliverames/ynab-mcp-server.git",
-  "source_dir": "/Users/oliverames/Developer/Projects/ynab-mcp-server"
+  "branch": "main",
+  "commit": "37bfda76c44d71067360f2122664b0b9bf7d21fe"
 }

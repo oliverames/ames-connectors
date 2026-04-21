@@ -1,0 +1,34 @@
+# Binaries
+/ames-unifi-mcp
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Build output
+/dist/
+/bin/
+
+# Test
+*.test
+*.out
+coverage.txt
+
+# IDE / Agent
+.idea/
+.vscode/
+.claude/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Docker
+docker-compose.override.yml
