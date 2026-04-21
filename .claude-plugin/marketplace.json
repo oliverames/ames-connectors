@@ -1,0 +1,25 @@
+{
+  "name": "ames-connectors",
+  "owner": {
+    "name": "Oliver Ames",
+    "email": "oliverames@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Oliver's custom MCP connector plugin marketplace",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ames-lytho",
+      "version": "1.0.0",
+      "description": "Lytho Workflow MCP connector built and maintained by Oliver Ames. Installing this plugin activates the lytho-mcp-server MCP, providing full read/write access to Lytho work requests, tasks, proofs, projects, campaigns, and preferences via the Lytho Open API.",
+      "source": "./plugins/ames-lytho"
+    },
+    {
+      "name": "ames-ynab",
+      "version": "2.0.1",
+      "description": "YNAB (You Need A Budget) MCP connector built and maintained by Oliver Ames. Installing this plugin activates the ynab-mcp-server MCP, providing full read/write access to YNAB budgets, transactions, categories, scheduled transactions, and payees.",
+      "source": "./plugins/ames-ynab"
+    }
+  ]
+}
