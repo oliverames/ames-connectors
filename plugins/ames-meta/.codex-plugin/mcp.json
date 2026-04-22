@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "meta-mcp-server": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd /tmp && npx -y @oliverames/meta-mcp-server@latest"
+      ],
+      "env": {
+        "META_ACCESS_TOKEN": "${META_ACCESS_TOKEN}",
+        "THREADS_ACCESS_TOKEN": "${THREADS_ACCESS_TOKEN}"
+      }
+    }
+  }
+}

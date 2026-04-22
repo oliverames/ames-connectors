@@ -1,6 +1,6 @@
 {
   "name": "ames-lytho",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Lytho Workflow MCP connector for work requests, tasks, proofs, projects, campaigns, files, and preferences through the Lytho Open API.",
   "author": {
     "name": "Oliver Ames",
@@ -17,7 +17,7 @@
     "creative-operations"
   ],
   "category": "productivity",
-  "mcpServers": "./.mcp.json",
+  "mcpServers": "./.codex-plugin/mcp.json",
   "interface": {
     "displayName": "Lytho MCP",
     "shortDescription": "Connect Claude and Codex to Lytho workflows and requests.",

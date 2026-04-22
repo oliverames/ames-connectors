@@ -47,6 +47,7 @@ plugins/
   ames-meta/
     .claude-plugin/plugin.json
     .codex-plugin/plugin.json
+    .codex-plugin/mcp.json
     .mcp.json
     update-sources.json
     sync-sources
@@ -54,6 +55,7 @@ plugins/
   ames-ynab/
     .claude-plugin/plugin.json
     .codex-plugin/plugin.json
+    .codex-plugin/mcp.json
     .mcp.json
     update-sources.json
     sync-sources
@@ -61,6 +63,7 @@ plugins/
   ames-sprout/
     .claude-plugin/plugin.json
     .codex-plugin/plugin.json
+    .codex-plugin/mcp.json
     .mcp.json
     update-sources.json
     sync-sources
@@ -68,6 +71,7 @@ plugins/
   ames-lytho/
     .claude-plugin/plugin.json
     .codex-plugin/plugin.json
+    .codex-plugin/mcp.json
     .mcp.json
     update-sources.json
     sync-sources
@@ -75,6 +79,7 @@ plugins/
   ames-imagerelay/
     .claude-plugin/plugin.json
     .codex-plugin/plugin.json
+    .codex-plugin/mcp.json
     .mcp.json
     update-sources.json
     sync-sources
@@ -82,6 +87,7 @@ plugins/
   ames-unifi/
     .claude-plugin/plugin.json
     .codex-plugin/plugin.json
+    .codex-plugin/mcp.json
     .mcp.json
     update-sources.json
     sync-sources
@@ -92,7 +98,8 @@ Each plugin includes:
 
 - `.claude-plugin/plugin.json` for Claude Code
 - `.codex-plugin/plugin.json` for Codex
-- `.mcp.json` for the MCP runtime launch config
+- `.mcp.json` for Claude Code's flat MCP runtime launch config
+- `.codex-plugin/mcp.json` for Codex's wrapped `{ "mcpServers": ... }` runtime launch config
 - `update-sources.json` pointing at the upstream GitHub repository
 - `sync-sources` to refresh `sources/` from the upstream repository
 

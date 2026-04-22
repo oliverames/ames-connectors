@@ -1,6 +1,6 @@
 {
   "name": "ames-unifi",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "UniFi Network MCP connector for controller management, clients, devices, firewall, Wi-Fi, VPN, switching, hotspot, and traffic tools.",
   "author": {
     "name": "Oliver Ames",
@@ -18,7 +18,7 @@
     "firewall"
   ],
   "category": "developer-tools",
-  "mcpServers": "./.mcp.json",
+  "mcpServers": "./.codex-plugin/mcp.json",
   "interface": {
     "displayName": "UniFi MCP",
     "shortDescription": "Connect Claude and Codex to UniFi Network controllers.",

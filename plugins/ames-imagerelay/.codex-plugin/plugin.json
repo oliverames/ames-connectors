@@ -1,6 +1,6 @@
 {
   "name": "ames-imagerelay",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Image Relay MCP connector for digital asset management, files, folders, collections, products, metadata, upload links, and webhooks.",
   "author": {
     "name": "Oliver Ames",
@@ -17,7 +17,7 @@
     "assets"
   ],
   "category": "productivity",
-  "mcpServers": "./.mcp.json",
+  "mcpServers": "./.codex-plugin/mcp.json",
   "interface": {
     "displayName": "Image Relay MCP",
     "shortDescription": "Connect Claude and Codex to Image Relay DAM.",

@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "sprout-mcp-server": {
+      "command": "bash",
+      "args": [
+        "-c",
+        "cd /tmp && npx -y @oliverames/sprout-mcp-server@latest"
+      ],
+      "env": {
+        "SPROUT_API_TOKEN": "${SPROUT_API_TOKEN}",
+        "SPROUT_CLIENT_ID": "${SPROUT_CLIENT_ID}",
+        "SPROUT_CLIENT_SECRET": "${SPROUT_CLIENT_SECRET}",
+        "SPROUT_ORG_ID": "${SPROUT_ORG_ID}"
+      }
+    }
+  }
+}
