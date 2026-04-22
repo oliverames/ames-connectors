@@ -19,6 +19,5 @@
     "ads-manager",
     "social-media"
   ],
-  "category": "marketing",
   "mcpServers": "./.mcp.json"
 }

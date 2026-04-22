@@ -17,6 +17,5 @@
     "project-management",
     "creative-operations"
   ],
-  "category": "productivity",
   "mcpServers": "./.mcp.json"
 }

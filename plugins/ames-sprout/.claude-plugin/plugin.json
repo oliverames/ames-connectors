@@ -17,6 +17,5 @@
     "analytics",
     "publishing"
   ],
-  "category": "marketing",
   "mcpServers": "./.mcp.json"
 }

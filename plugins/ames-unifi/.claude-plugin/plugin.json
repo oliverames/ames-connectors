@@ -18,6 +18,5 @@
     "wifi",
     "firewall"
   ],
-  "category": "developer-tools",
   "mcpServers": "./.mcp.json"
 }
