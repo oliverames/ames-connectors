@@ -1,6 +1,6 @@
 {
   "name": "ames-unifi",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "UniFi Network MCP connector for controller management, clients, devices, firewall, Wi-Fi, VPN, switching, hotspot, and traffic tools.",
   "author": {
     "name": "Oliver Ames",

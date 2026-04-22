@@ -6,12 +6,12 @@
   },
   "metadata": {
     "description": "Oliver's custom MCP connector plugin marketplace",
-    "version": "1.2.0"
+    "version": "1.2.1"
   },
   "plugins": [
     {
       "name": "ames-imagerelay",
-      "version": "2.0.4",
+      "version": "2.0.5",
       "description": "Image Relay MCP connector for digital asset management, files, folders, collections, products, metadata, upload links, and webhooks.",
       "source": "./plugins/ames-imagerelay",
       "author": {
@@ -28,12 +28,11 @@
         "digital-asset-management",
         "dam",
         "assets"
-      ],
-      "category": "productivity"
+      ]
     },
     {
       "name": "ames-lytho",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "description": "Lytho Workflow MCP connector for work requests, tasks, proofs, projects, campaigns, files, and preferences through the Lytho Open API.",
       "source": "./plugins/ames-lytho",
       "author": {
@@ -50,12 +49,11 @@
         "workflow",
         "project-management",
         "creative-operations"
-      ],
-      "category": "productivity"
+      ]
     },
     {
       "name": "ames-meta",
-      "version": "2.0.4",
+      "version": "2.0.5",
       "description": "Meta Business Suite MCP connector for Facebook Pages, Instagram, Threads, Ads Manager, Commerce, Conversions API, and related Graph API workflows.",
       "source": "./plugins/ames-meta",
       "author": {
@@ -74,12 +72,11 @@
         "threads",
         "ads-manager",
         "social-media"
-      ],
-      "category": "marketing"
+      ]
     },
     {
       "name": "ames-sprout",
-      "version": "1.1.4",
+      "version": "1.1.5",
       "description": "Sprout Social MCP connector for analytics, inbox messages, social listening, publishing, media uploads, and support cases.",
       "source": "./plugins/ames-sprout",
       "author": {
@@ -96,12 +93,11 @@
         "social-media",
         "analytics",
         "publishing"
-      ],
-      "category": "marketing"
+      ]
     },
     {
       "name": "ames-unifi",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "description": "UniFi Network MCP connector for controller management, clients, devices, firewall, Wi-Fi, VPN, switching, hotspot, and traffic tools.",
       "source": "./plugins/ames-unifi",
       "author": {
@@ -119,12 +115,11 @@
         "network",
         "wifi",
         "firewall"
-      ],
-      "category": "developer-tools"
+      ]
     },
     {
       "name": "ames-ynab",
-      "version": "2.0.4",
+      "version": "2.0.5",
       "description": "YNAB MCP connector for budgets, transactions, categories, scheduled transactions, accounts, months, payees, and budget review workflows.",
       "source": "./plugins/ames-ynab",
       "author": {
@@ -141,8 +136,7 @@
         "budget",
         "finance",
         "personal-finance"
-      ],
-      "category": "finance"
+      ]
     }
   ]
 }
