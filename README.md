@@ -61,12 +61,14 @@ Each connector reads its credentials from environment variables at launch. See t
 ### Codex (experimental)
 
 ```
-codex marketplace add https://github.com/oliverames/ames-connectors
+codex plugin marketplace add oliverames/ames-connectors
 ```
 
 Then install individual plugins through Codex's plugin UI or CLI.
 
 > **Heads-up:** Codex's marketplace commands are still stabilizing. Verify exact syntax with `codex --help` before scripting. File an issue if any Codex manifest in this repo falls out of spec.
+
+Codex MCP manifests use `env_vars` allow-lists for connector secrets rather than literal `${ENV_VAR}` placeholders. Launch Codex with the required connector credentials in the local process environment, or use a connector's upstream 1Password fallback where documented. `shell_environment_policy.set` is for shell tool subprocesses and should not be treated as Codex MCP credential interpolation.
 
 ## Available connectors
 
@@ -140,7 +142,7 @@ Each plugin includes:
 - `.claude-plugin/plugin.json` for Claude Code
 - `.codex-plugin/plugin.json` for Codex
 - `.mcp.json` for Claude Code's flat MCP runtime launch config
-- `.codex-plugin/mcp.json` for Codex's wrapped `{ "mcpServers": ... }` runtime launch config
+- `.codex-plugin/mcp.json` for Codex's wrapped `{ "mcpServers": ... }` runtime launch config with `env_vars` credential pass-through
 - `update-sources.json` pointing at the upstream GitHub repository
 - `sync-sources` to refresh `sources/` from the upstream repository
 
@@ -151,7 +153,7 @@ The repo carries two parallel manifest namespaces under one plugin tree, the sam
 | Host | Marketplace manifest | Per-plugin manifest | MCP config |
 |------|----------------------|---------------------|-----------|
 | Claude Code | `.claude-plugin/marketplace.json` | `.claude-plugin/plugin.json` | flat `.mcp.json` at plugin root |
-| Codex (experimental) | `.agents/plugins/marketplace.json` | `.codex-plugin/plugin.json` | wrapped `.codex-plugin/mcp.json` |
+| Codex (experimental) | `.agents/plugins/marketplace.json` | `.codex-plugin/plugin.json` | wrapped `.codex-plugin/mcp.json` using `env_vars` |
 
 `.claude-plugin/plugin.json` is the single source of truth. Metadata — `version`, `author`, `homepage`, `repository`, `license`, `keywords`, `category` — propagates into the generated marketplace entry at `./sync` time.
 
@@ -163,7 +165,7 @@ The repo carries two parallel manifest namespaces under one plugin tree, the sam
 2. Run `./sync` from the repo root.
    - The Claude-side version propagates to `.codex-plugin/plugin.json`.
    - Both `marketplace.json` files regenerate with the enriched metadata.
-   - `.mcp.json` is re-wrapped into `.codex-plugin/mcp.json` for Codex.
+   - `.mcp.json` is re-wrapped into `.codex-plugin/mcp.json` for Codex, converting `${ENV_VAR}` placeholders into Codex `env_vars`.
 3. Commit and push. Installed clients pick up the new version on their next marketplace refresh.
 
 ### Refreshing a connector's source snapshot

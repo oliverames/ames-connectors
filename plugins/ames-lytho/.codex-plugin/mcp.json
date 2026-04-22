@@ -6,11 +6,11 @@
         "-c",
         "cd /tmp && npx -y @oliverames/lytho-mcp-server@latest"
       ],
-      "env": {
-        "LYTHO_CLIENT_ID": "${LYTHO_CLIENT_ID}",
-        "LYTHO_CLIENT_SECRET": "${LYTHO_CLIENT_SECRET}",
-        "LYTHO_TOKEN_URL": "${LYTHO_TOKEN_URL}"
-      }
+      "env_vars": [
+        "LYTHO_CLIENT_ID",
+        "LYTHO_CLIENT_SECRET",
+        "LYTHO_TOKEN_URL"
+      ]
     }
   }
 }

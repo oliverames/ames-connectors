@@ -36,6 +36,53 @@ HERE = Path(__file__).parent
 PLUGINS_DIR = HERE / "plugins"
 CLAUDE_MARKETPLACE = HERE / ".claude-plugin" / "marketplace.json"
 CODEX_MARKETPLACE = HERE / ".agents" / "plugins" / "marketplace.json"
+OP_FALLBACK_PLUGINS = {
+    "ames-imagerelay",
+    "ames-meta",
+    "ames-sprout",
+    "ames-unifi",
+    "ames-ynab",
+}
+
+
+def _codex_mcp_data(plugin_name, mcp_data):
+    """Return a Codex MCP wrapper, converting ${VAR} env entries to env_vars.
+
+    Claude Code resolves ${VAR} entries in plugin MCP manifests, but Codex's
+    stdio MCP config treats env values literally. Codex's supported way to pass
+    local process environment variables through to stdio MCP servers is the
+    env_vars allow-list.
+    """
+    servers = mcp_data.get("mcpServers", mcp_data) if isinstance(mcp_data, dict) else mcp_data
+    codex_servers = json.loads(json.dumps(servers))
+    for server in codex_servers.values():
+        if not isinstance(server, dict):
+            continue
+        env = server.get("env")
+        if not isinstance(env, dict):
+            continue
+        literal_env = {}
+        env_vars = list(server.get("env_vars", []))
+        existing_names = {
+            item if isinstance(item, str) else item.get("name")
+            for item in env_vars
+        }
+        for key, value in env.items():
+            if value == f"${{{key}}}":
+                if key not in existing_names:
+                    env_vars.append(key)
+                    existing_names.add(key)
+            else:
+                literal_env[key] = value
+        if plugin_name in OP_FALLBACK_PLUGINS and "OP_SERVICE_ACCOUNT_TOKEN" not in existing_names:
+            env_vars.append("OP_SERVICE_ACCOUNT_TOKEN")
+        if literal_env:
+            server["env"] = literal_env
+        else:
+            server.pop("env", None)
+        if env_vars:
+            server["env_vars"] = env_vars
+    return {"mcpServers": codex_servers}
 
 _header("sync", "ames-connectors marketplaces")
 
@@ -69,10 +116,7 @@ for plugin_dir in sorted(PLUGINS_DIR.iterdir()):
     if claude_mcp.exists():
         with open(claude_mcp) as f:
             mcp_data = json.load(f)
-        if isinstance(mcp_data, dict) and "mcpServers" in mcp_data:
-            codex_mcp_data = mcp_data
-        else:
-            codex_mcp_data = {"mcpServers": mcp_data}
+        codex_mcp_data = _codex_mcp_data(plugin_dir.name, mcp_data)
         codex_mcp.parent.mkdir(parents=True, exist_ok=True)
         current_codex_mcp = None
         if codex_mcp.exists():

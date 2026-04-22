@@ -6,10 +6,11 @@
         "-c",
         "cd /tmp && npx -y imagerelay-mcp-server@latest"
       ],
-      "env": {
-        "IMAGERELAY_API_KEY": "${IMAGERELAY_API_KEY}",
-        "IMAGERELAY_SUBDOMAIN": "${IMAGERELAY_SUBDOMAIN}"
-      }
+      "env_vars": [
+        "IMAGERELAY_API_KEY",
+        "IMAGERELAY_SUBDOMAIN",
+        "OP_SERVICE_ACCOUNT_TOKEN"
+      ]
     }
   }
 }

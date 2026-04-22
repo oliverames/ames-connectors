@@ -6,16 +6,17 @@
         "-c",
         "cd /tmp && npx -y ames-unifi-mcp@latest"
       ],
-      "env": {
-        "UNIFI_HOST": "${UNIFI_HOST}",
-        "UNIFI_API_KEY": "${UNIFI_API_KEY}",
-        "UNIFI_USERNAME": "${UNIFI_USERNAME}",
-        "UNIFI_PASSWORD": "${UNIFI_PASSWORD}",
-        "UNIFI_SITE": "${UNIFI_SITE}",
-        "UNIFI_VERIFY_SSL": "${UNIFI_VERIFY_SSL}",
-        "UNIFI_TOOL_MODE": "${UNIFI_TOOL_MODE}",
-        "UNIFI_PERMISSION_PROFILE": "${UNIFI_PERMISSION_PROFILE}"
-      }
+      "env_vars": [
+        "UNIFI_HOST",
+        "UNIFI_API_KEY",
+        "UNIFI_USERNAME",
+        "UNIFI_PASSWORD",
+        "UNIFI_SITE",
+        "UNIFI_VERIFY_SSL",
+        "UNIFI_TOOL_MODE",
+        "UNIFI_PERMISSION_PROFILE",
+        "OP_SERVICE_ACCOUNT_TOKEN"
+      ]
     }
   }
 }

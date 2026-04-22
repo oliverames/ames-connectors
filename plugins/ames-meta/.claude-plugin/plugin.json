@@ -1,6 +1,6 @@
 {
   "name": "ames-meta",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Meta Business Suite MCP connector for Facebook Pages, Instagram, Threads, Ads Manager, Commerce, Conversions API, and related Graph API workflows.",
   "author": {
     "name": "Oliver Ames",

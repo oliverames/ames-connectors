@@ -6,12 +6,13 @@
         "-c",
         "cd /tmp && npx -y @oliverames/sprout-mcp-server@latest"
       ],
-      "env": {
-        "SPROUT_API_TOKEN": "${SPROUT_API_TOKEN}",
-        "SPROUT_CLIENT_ID": "${SPROUT_CLIENT_ID}",
-        "SPROUT_CLIENT_SECRET": "${SPROUT_CLIENT_SECRET}",
-        "SPROUT_ORG_ID": "${SPROUT_ORG_ID}"
-      }
+      "env_vars": [
+        "SPROUT_API_TOKEN",
+        "SPROUT_CLIENT_ID",
+        "SPROUT_CLIENT_SECRET",
+        "SPROUT_ORG_ID",
+        "OP_SERVICE_ACCOUNT_TOKEN"
+      ]
     }
   }
 }

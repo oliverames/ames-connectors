@@ -6,11 +6,12 @@
         "-c",
         "cd /tmp && npx -y @oliverames/ynab-mcp-server@latest"
       ],
-      "env": {
-        "YNAB_API_TOKEN": "${YNAB_API_TOKEN}",
-        "YNAB_BUDGET_ID": "${YNAB_BUDGET_ID}",
-        "YNAB_OP_PATH": "${YNAB_OP_PATH}"
-      }
+      "env_vars": [
+        "YNAB_API_TOKEN",
+        "YNAB_BUDGET_ID",
+        "YNAB_OP_PATH",
+        "OP_SERVICE_ACCOUNT_TOKEN"
+      ]
     }
   }
 }
