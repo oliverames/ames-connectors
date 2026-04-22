@@ -6,44 +6,143 @@
   },
   "metadata": {
     "description": "Oliver's custom MCP connector plugin marketplace",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "plugins": [
     {
-      "name": "ames-meta",
-      "version": "2.0.3",
-      "description": "Meta Business Suite MCP connector for Facebook Pages, Instagram, Threads, Ads Manager, Commerce, Conversions API, and related Graph API workflows.",
-      "source": "./plugins/ames-meta"
-    },
-    {
-      "name": "ames-ynab",
-      "version": "2.0.3",
-      "description": "YNAB MCP connector for budgets, transactions, categories, scheduled transactions, accounts, months, payees, and budget review workflows.",
-      "source": "./plugins/ames-ynab"
-    },
-    {
-      "name": "ames-sprout",
-      "version": "1.1.3",
-      "description": "Sprout Social MCP connector for analytics, inbox messages, social listening, publishing, media uploads, and support cases.",
-      "source": "./plugins/ames-sprout"
+      "name": "ames-imagerelay",
+      "version": "2.0.4",
+      "description": "Image Relay MCP connector for digital asset management, files, folders, collections, products, metadata, upload links, and webhooks.",
+      "source": "./plugins/ames-imagerelay",
+      "author": {
+        "name": "Oliver Ames",
+        "email": "oliverames@gmail.com",
+        "url": "https://github.com/oliverames"
+      },
+      "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-imagerelay",
+      "repository": "https://github.com/oliverames/ames-connectors",
+      "license": "MIT",
+      "keywords": [
+        "mcp",
+        "image-relay",
+        "digital-asset-management",
+        "dam",
+        "assets"
+      ],
+      "category": "productivity"
     },
     {
       "name": "ames-lytho",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "description": "Lytho Workflow MCP connector for work requests, tasks, proofs, projects, campaigns, files, and preferences through the Lytho Open API.",
-      "source": "./plugins/ames-lytho"
+      "source": "./plugins/ames-lytho",
+      "author": {
+        "name": "Oliver Ames",
+        "email": "oliverames@gmail.com",
+        "url": "https://github.com/oliverames"
+      },
+      "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-lytho",
+      "repository": "https://github.com/oliverames/ames-connectors",
+      "license": "MIT",
+      "keywords": [
+        "mcp",
+        "lytho",
+        "workflow",
+        "project-management",
+        "creative-operations"
+      ],
+      "category": "productivity"
     },
     {
-      "name": "ames-imagerelay",
-      "version": "2.0.3",
-      "description": "Image Relay MCP connector for digital asset management, files, folders, collections, products, metadata, upload links, and webhooks.",
-      "source": "./plugins/ames-imagerelay"
+      "name": "ames-meta",
+      "version": "2.0.4",
+      "description": "Meta Business Suite MCP connector for Facebook Pages, Instagram, Threads, Ads Manager, Commerce, Conversions API, and related Graph API workflows.",
+      "source": "./plugins/ames-meta",
+      "author": {
+        "name": "Oliver Ames",
+        "email": "oliverames@gmail.com",
+        "url": "https://github.com/oliverames"
+      },
+      "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-meta",
+      "repository": "https://github.com/oliverames/ames-connectors",
+      "license": "MIT",
+      "keywords": [
+        "mcp",
+        "meta",
+        "facebook",
+        "instagram",
+        "threads",
+        "ads-manager",
+        "social-media"
+      ],
+      "category": "marketing"
+    },
+    {
+      "name": "ames-sprout",
+      "version": "1.1.4",
+      "description": "Sprout Social MCP connector for analytics, inbox messages, social listening, publishing, media uploads, and support cases.",
+      "source": "./plugins/ames-sprout",
+      "author": {
+        "name": "Oliver Ames",
+        "email": "oliverames@gmail.com",
+        "url": "https://github.com/oliverames"
+      },
+      "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-sprout",
+      "repository": "https://github.com/oliverames/ames-connectors",
+      "license": "MIT",
+      "keywords": [
+        "mcp",
+        "sprout-social",
+        "social-media",
+        "analytics",
+        "publishing"
+      ],
+      "category": "marketing"
     },
     {
       "name": "ames-unifi",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "description": "UniFi Network MCP connector for controller management, clients, devices, firewall, Wi-Fi, VPN, switching, hotspot, and traffic tools.",
-      "source": "./plugins/ames-unifi"
+      "source": "./plugins/ames-unifi",
+      "author": {
+        "name": "Oliver Ames",
+        "email": "oliverames@gmail.com",
+        "url": "https://github.com/oliverames"
+      },
+      "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-unifi",
+      "repository": "https://github.com/oliverames/ames-connectors",
+      "license": "MIT",
+      "keywords": [
+        "mcp",
+        "unifi",
+        "ubiquiti",
+        "network",
+        "wifi",
+        "firewall"
+      ],
+      "category": "developer-tools"
+    },
+    {
+      "name": "ames-ynab",
+      "version": "2.0.4",
+      "description": "YNAB MCP connector for budgets, transactions, categories, scheduled transactions, accounts, months, payees, and budget review workflows.",
+      "source": "./plugins/ames-ynab",
+      "author": {
+        "name": "Oliver Ames",
+        "email": "oliverames@gmail.com",
+        "url": "https://github.com/oliverames"
+      },
+      "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-ynab",
+      "repository": "https://github.com/oliverames/ames-connectors",
+      "license": "MIT",
+      "keywords": [
+        "mcp",
+        "ynab",
+        "budget",
+        "finance",
+        "personal-finance"
+      ],
+      "category": "finance"
     }
   ]
 }

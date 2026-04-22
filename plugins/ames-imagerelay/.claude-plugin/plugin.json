@@ -1,11 +1,15 @@
 {
   "name": "ames-imagerelay",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Image Relay MCP connector for digital asset management, files, folders, collections, products, metadata, upload links, and webhooks.",
   "author": {
     "name": "Oliver Ames",
-    "email": "oliverames@gmail.com"
+    "email": "oliverames@gmail.com",
+    "url": "https://github.com/oliverames"
   },
+  "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-imagerelay",
+  "repository": "https://github.com/oliverames/ames-connectors",
+  "license": "MIT",
   "keywords": [
     "mcp",
     "image-relay",
@@ -13,5 +17,6 @@
     "dam",
     "assets"
   ],
+  "category": "productivity",
   "mcpServers": "./.mcp.json"
 }

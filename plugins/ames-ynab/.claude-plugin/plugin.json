@@ -1,11 +1,15 @@
 {
   "name": "ames-ynab",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "YNAB MCP connector for budgets, transactions, categories, scheduled transactions, accounts, months, payees, and budget review workflows.",
   "author": {
     "name": "Oliver Ames",
-    "email": "oliverames@gmail.com"
+    "email": "oliverames@gmail.com",
+    "url": "https://github.com/oliverames"
   },
+  "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-ynab",
+  "repository": "https://github.com/oliverames/ames-connectors",
+  "license": "MIT",
   "keywords": [
     "mcp",
     "ynab",
@@ -13,5 +17,6 @@
     "finance",
     "personal-finance"
   ],
+  "category": "finance",
   "mcpServers": "./.mcp.json"
 }

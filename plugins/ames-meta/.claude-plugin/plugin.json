@@ -1,11 +1,15 @@
 {
   "name": "ames-meta",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Meta Business Suite MCP connector for Facebook Pages, Instagram, Threads, Ads Manager, Commerce, Conversions API, and related Graph API workflows.",
   "author": {
     "name": "Oliver Ames",
-    "email": "oliverames@gmail.com"
+    "email": "oliverames@gmail.com",
+    "url": "https://github.com/oliverames"
   },
+  "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-meta",
+  "repository": "https://github.com/oliverames/ames-connectors",
+  "license": "MIT",
   "keywords": [
     "mcp",
     "meta",
@@ -15,5 +19,6 @@
     "ads-manager",
     "social-media"
   ],
+  "category": "marketing",
   "mcpServers": "./.mcp.json"
 }

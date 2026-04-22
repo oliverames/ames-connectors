@@ -1,11 +1,15 @@
 {
   "name": "ames-unifi",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "UniFi Network MCP connector for controller management, clients, devices, firewall, Wi-Fi, VPN, switching, hotspot, and traffic tools.",
   "author": {
     "name": "Oliver Ames",
-    "email": "oliverames@gmail.com"
+    "email": "oliverames@gmail.com",
+    "url": "https://github.com/oliverames"
   },
+  "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-unifi",
+  "repository": "https://github.com/oliverames/ames-connectors",
+  "license": "MIT",
   "keywords": [
     "mcp",
     "unifi",
@@ -14,5 +18,6 @@
     "wifi",
     "firewall"
   ],
+  "category": "developer-tools",
   "mcpServers": "./.mcp.json"
 }

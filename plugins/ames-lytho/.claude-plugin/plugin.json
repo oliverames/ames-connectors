@@ -1,11 +1,15 @@
 {
   "name": "ames-lytho",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Lytho Workflow MCP connector for work requests, tasks, proofs, projects, campaigns, files, and preferences through the Lytho Open API.",
   "author": {
     "name": "Oliver Ames",
-    "email": "oliverames@gmail.com"
+    "email": "oliverames@gmail.com",
+    "url": "https://github.com/oliverames"
   },
+  "homepage": "https://github.com/oliverames/ames-connectors/tree/main/plugins/ames-lytho",
+  "repository": "https://github.com/oliverames/ames-connectors",
+  "license": "MIT",
   "keywords": [
     "mcp",
     "lytho",
@@ -13,5 +17,6 @@
     "project-management",
     "creative-operations"
   ],
+  "category": "productivity",
   "mcpServers": "./.mcp.json"
 }
