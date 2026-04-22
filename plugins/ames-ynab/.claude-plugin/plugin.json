@@ -17,6 +17,5 @@
     "finance",
     "personal-finance"
   ],
-  "category": "finance",
   "mcpServers": "./.mcp.json"
 }

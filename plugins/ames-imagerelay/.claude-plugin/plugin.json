@@ -17,6 +17,5 @@
     "dam",
     "assets"
   ],
-  "category": "productivity",
   "mcpServers": "./.mcp.json"
 }
