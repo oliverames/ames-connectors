@@ -1,5 +1,22 @@
 # Worklog
 
+## 2026-05-01 — Fix missing version fields in Codex marketplace manifest
+
+**What changed**: The `sync` script was not including `"version"` in the Codex marketplace entries it wrote to `.agents/plugins/marketplace.json`. The ames-claude sync (written first) always included the version field; when ames-connectors got its own sync script it was missing that one line. Fixed by adding `"version": meta.get("version")` to the `codex_plugins.append()` call in Pass 3 of sync. Re-ran `./sync` to regenerate the manifest with all 6 connector versions (imagerelay@2.0.5, lytho@1.0.5, meta@2.0.5, sprout@1.1.5, unifi@1.0.6, ynab@2.0.5). Committed as `bf30c8f`, pushed, and ran `codex plugin marketplace upgrade ames-connectors` to pull the fix into Codex's local cache.
+
+**Decisions made**: Minimal fix — one line added to sync, no version bumps needed because the actual plugin content didn't change, only the manifest generator.
+
+**Left off at**:
+- **Still open: Decide whether to extract sync into a shared helper.** The ames-claude and ames-connectors sync scripts diverged here and will continue to do so unless consolidated.
+- **Still open: ames-lytho enablement decision** — not enabled in `~/.claude/settings.json`.
+- **Still open: postpublish hooks in meta/sprout/imagerelay/unifi** — confirm they target this repo or drop them.
+
+**Open questions**: None new this session.
+
+Part of a session that also verified ames-claude sync (no drift found).
+
+---
+
 ## 2026-04-21 (evening) — Metadata enrichment, sync script introduction, README polish
 
 **What changed**: First worklog for ames-connectors since the 2026-04-21 split from ames-claude. Enriched every Claude plugin.json across all 6 connectors (`ames-imagerelay`, `ames-lytho`, `ames-meta`, `ames-sprout`, `ames-unifi`, `ames-ynab`) with `homepage`, `repository`, `license`, and `category` (the existing `keywords` stayed). Introduced a `sync` script at repo root that mirrors the ames-claude pattern: propagates Claude-side version into `.codex-plugin/plugin.json`, wraps flat `.mcp.json` into Codex-shaped `.codex-plugin/mcp.json`, and regenerates both `marketplace.json` files threading the enriched metadata through. Before this, the two `marketplace.json` files were hand-edited — fine for a 6-plugin repo, but every bump risked drift. Patch-bumped every connector (+1 patch on each) and the marketplace `metadata.version` (1.1.0→1.2.0). Polished the README per `/readme-style`: it was missing install instructions entirely, so added a full Quick Start with declarative (settings.json snippet) and interactive (`/plugin install`) paths for both Claude Code and Codex, plus an Architecture section documenting the dual-host manifest pattern, a Development section covering bump/refresh-source/add-connector workflows, and a `category` column on the connectors table. Validated all 26 JSON files in the repo parse cleanly and sync is idempotent.
