@@ -192,6 +192,7 @@ if CODEX_MARKETPLACE.exists():
             meta = json.load(f)
         codex_plugins.append({
             "name": meta["name"],
+            "version": meta.get("version"),
             "source": {
                 "source": "local",
                 "path": f"./plugins/{plugin_dir.name}",
